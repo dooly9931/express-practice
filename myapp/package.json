@@ -20,9 +20,12 @@
   "devDependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/eslint-plugin": "^7.16.5",
     "@babel/node": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "core-js": "^3.20.2",
+    "eslint": "^8.6.0",
     "regenerator-runtime": "^0.13.9"
   }
 }

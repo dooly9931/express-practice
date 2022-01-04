@@ -1,0 +1,28 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "dev": "babel-node ./src/bin/www.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel ./src --out-dir dist --copy-files",
+    "prod": "node ./dist/bin/www.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "core-js": "^3.20.2",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

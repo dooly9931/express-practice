@@ -1,5 +1,5 @@
 import express from 'express';
-var router = express.Router();
+const router = express.Router();
 
 /* GET users listing. */
 // eslint-disable-next-line no-unused-vars

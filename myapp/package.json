@@ -27,6 +27,7 @@
     "core-js": "^3.20.2",
     "eslint": "^8.6.0",
     "nodemon": "^2.0.15",
+    "pg-promise": "^10.11.1",
     "regenerator-runtime": "^0.13.9"
   }
 }

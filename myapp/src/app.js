@@ -6,8 +6,9 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
+import heroRouter from './routes/hero';
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// // route handler (or middleware) bound to app before router binding
+// const rootLogger = (req, res, next) => {
+//   console.log('root logger');
+//   next();
+// };
+// app.use(rootLogger);
+
+app.use('/hero', heroRouter);
+
+// // bound to app after router binding (end of req-res cycle) -> never executed
+// const rootAfterLogger = (req, res, next) => {
+//   console.log('root after logger');
+//   next();
+// };
+// app.use(rootAfterLogger);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
